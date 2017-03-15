@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wall</title>
+  </head>
+  <body>
+    <% if flash[:errors] %>
+     <p><%= flash[:errors] %></p>
+    <% end %>
+    <form class="" action="/users/login" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="text" name="user[username]" placeholder="Username/Email"  value="">
+      <br>
+      <input type="text" name="user[password]" placeholder="password" value="">
+      <br>
+      <input type="submit" name="" value="Login">
+    </form>
+    <a href="/users/new">New User?</a>
+  </body>
+</html>
